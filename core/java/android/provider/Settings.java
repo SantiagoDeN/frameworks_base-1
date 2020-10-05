@@ -5859,6 +5859,12 @@ public final class Settings {
         };
 
         /**
+         * Whether or not to vibrate when back gesture is used
+         * @hide
+         */
+        public static final String BACK_GESTURE_HAPTIC = "back_gesture_haptic";
+
+        /**
          * These are all public system settings
          *
          * @hide
@@ -5983,6 +5989,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(VOLUME_KEY_CURSOR_CONTROL);
             PRIVATE_SETTINGS.add(HEADS_UP_STOPLIST_VALUES);
             PRIVATE_SETTINGS.add(HEADS_UP_BLACKLIST_VALUES);
+            PRIVATE_SETTINGS.add(BACK_GESTURE_HAPTIC);
         }
 
         /**
