@@ -229,4 +229,5 @@ interface IStatusBarService
     void unregisterNearbyMediaDevicesProvider(in INearbyMediaDevicesProvider provider);
 
     void toggleCameraFlash();
+    void screenPinningStateChanged(boolean enabled);
 }
