@@ -49,6 +49,7 @@ import com.android.systemui.statusbar.StatusIconDisplayable;
 import com.android.systemui.statusbar.phone.StatusBarSignalPolicy.CallIndicatorIconState;
 import com.android.systemui.statusbar.phone.StatusBarSignalPolicy.MobileIconState;
 import com.android.systemui.statusbar.phone.StatusBarSignalPolicy.WifiIconState;
+import com.android.systemui.statusbar.policy.NetworkTrafficSB;
 import com.android.systemui.util.Assert;
 
 import java.util.ArrayList;
@@ -432,12 +433,14 @@ public interface StatusBarIconController {
         public void onSetIconHolder(int viewIndex, StatusBarIconHolder holder) {
             switch (holder.getType()) {
                 case TYPE_ICON:
-                    onSetIcon(viewIndex, holder.getIcon());
+                    View view = mGroup.getChildAt(viewIndex);
+                    if (view instanceof StatusBarIconView) {
+                        onSetIcon(viewIndex, holder.getIcon());
+                    }
                     return;
                 case TYPE_WIFI:
                     onSetSignalIcon(viewIndex, holder.getWifiState());
                     return;
-
                 case TYPE_MOBILE:
                     onSetMobileIcon(viewIndex, holder.getMobileState());
                 default:
