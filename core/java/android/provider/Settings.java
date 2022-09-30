@@ -5636,6 +5636,12 @@ public final class Settings {
          * @hide
          */
         public static final String POWERMENU_ADVANCED = "powermenu_advanced";
+		
+		/**
+         * Whether or not volume button music controls should be enabled to seek media tracks
+         * @hide
+         */
+        public static final String VOLBTN_MUSIC_CONTROLS = "volbtn_music_controls";
 
         /**
          * Whether to display power in the power menu
