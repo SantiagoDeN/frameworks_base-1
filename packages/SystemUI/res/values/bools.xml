@@ -19,3 +19,10 @@
     <!-- Whether to show the user switcher in quick settings when only a single user is present. -->
     <bool name="qs_show_user_switcher_for_single_user">false</bool>
 </resources>
+<!-- Burning protection/
+-->
+<resources>
+	<bool name="config_enableBurnInProtection">true</bool>
+	<bool name="config_enableSmartPixels">true</bool>
+	<bool name="config_statusBarBurnInProtection">true</bool>
+</resources>
